@@ -1,5 +1,5 @@
 # sndiomixer
-A small mixer made in C for sndio
+A small mixer made in C for sndio(guide focused on OpenBSD)
 # Installation
 ## Prerequisites
 What you'll need first:<br>
