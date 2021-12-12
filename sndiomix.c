@@ -33,7 +33,7 @@ void nick(){
    sprintf(icmnd, "sndioctl input.level=%f", input2);
    system(icmnd);
    printf("----------------------\n");
-   kangs();
+   nick();
    break;
   case 3:
    printf("\033cSNEEDIO MIXER C\n");
