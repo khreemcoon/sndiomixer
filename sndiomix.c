@@ -14,9 +14,10 @@ void nick(){
   case 1:
    printf("\033cSNDIO MIXER C\n");
    printf("----------------------\n");
-   printf("Input new output level(VALUE MUST BE BETWEEN 1 AND 0): ");
+   printf("Input new output level(VALUE MUST BE BETWEEN 0 AND 100): ");
    float input=0;
    scanf("%f", &input);
+   input /=100;
    char* ocmnd=malloc(64);
    sprintf(ocmnd, "sndioctl output.level=%f", input);
    system(ocmnd);
@@ -26,8 +27,9 @@ void nick(){
   case 2:
    printf("\033cSNDIO MIXER C\n");
    printf("----------------------\n");
-   printf("Input new input level(VALUE MUST BE BETWEEN 1 AND 0): ");
+   printf("Input new input level(VALUE MUST BE BETWEEN 0 AND 100): ");
    float input2=0;
+   input2 /=100;
    scanf("%f", &input2);
    char* icmnd=malloc(64);
    sprintf(icmnd, "sndioctl input.level=%f", input2);
@@ -49,3 +51,4 @@ int main(int argc, char ** args){
  nick();
  return 0;
 }
+
